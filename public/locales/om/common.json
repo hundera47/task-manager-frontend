@@ -1,0 +1,14 @@
+{
+  "appTitle": "Manajara Taaskii",
+  "login": "Seeni",
+  "register": "Galmaa'i",
+  "email": "Imeeyli",
+  "password": "Jecha darbii",
+  "logout": "Ba'i",
+  "createTask": "Taaskii Uumi",
+  "title": "Mata-duree",
+  "description": "Ibsa",
+  "dueDate": "Guyyaa Xumuramuu",
+  "status": "Haala",
+  "language": "Afaan"
+}

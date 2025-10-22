@@ -1,0 +1,14 @@
+{
+  "appTitle": "የስራ አስተካከያ",
+  "login": "ግባ",
+  "register": "ይመዝገቡ",
+  "email": "ኢሜይል",
+  "password": "የይለፍ ቃል",
+  "logout": "ውጣ",
+  "createTask": "ተግባር ፍጠር",
+  "title": "ርዕስ",
+  "description": "ማብራሪያ",
+  "dueDate": "የመጨረሻ ቀን",
+  "status": "ሁኔታ",
+  "language": "ቋንቋ"
+}
