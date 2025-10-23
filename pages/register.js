@@ -8,43 +8,76 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 export default function Register() {
   const { t } = useTranslation('common');
   const router = useRouter();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    password: '',
+  });
+  const [loading, setLoading] = useState(false);
 
-  const handle = async (e) => {
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      await api.post('/auth/register', { name, email, password });
-      alert('Registered — please login');
+      await api.post('/auth/register', form);
+      alert('✅ Registration successful! Please log in.');
       router.push('/login');
     } catch (err) {
-      alert(err?.response?.data?.error || 'Register failed');
+      alert(err?.response?.data?.error || '❌ Registration failed');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <>
       <Navbar />
-      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-        <h3 className="text-xl font-semibold mb-4">{t('register')}</h3>
-        <form onSubmit={handle} className="flex flex-col gap-3">
-          <input className="p-2 border" placeholder="Name" value={name} onChange={(e)=>setName(e.target.value)} />
-          <input className="p-2 border" placeholder={t('email')} value={email} onChange={(e)=>setEmail(e.target.value)} />
-          <input type="password" className="p-2 border" placeholder={t('password')} value={password} onChange={(e)=>setPassword(e.target.value)} />
-          <button className="bg-green-600 text-white px-4 py-2 rounded">{t('register')}</button>
-        </form>
+      <div className="flex justify-center mt-10">
+        <div className="bg-white shadow p-8 rounded w-full max-w-md">
+          <h2 className="text-2xl font-semibold mb-6 text-center">{t('register')}</h2>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <input
+              name="name"
+              placeholder="Name"
+              value={form.name}
+              onChange={handleChange}
+              className="border p-2 rounded"
+              required
+            />
+            <input
+              name="email"
+              placeholder={t('email')}
+              value={form.email}
+              onChange={handleChange}
+              className="border p-2 rounded"
+              type="email"
+              required
+            />
+            <input
+              name="password"
+              placeholder={t('password')}
+              value={form.password}
+              onChange={handleChange}
+              className="border p-2 rounded"
+              type="password"
+              required
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-green-600 text-white py-2 rounded hover:bg-green-700 transition disabled:bg-gray-400"
+            >
+              {loading ? '⏳...' : t('register')}
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common']))
-    }
-  };
 }
 
 export async function getStaticProps({ locale }) {
