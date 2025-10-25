@@ -1,24 +1,47 @@
 // store/taskStore.js
 import { create } from 'zustand';
-import api from '../utils/api';
+import api from '@/utils/api';
 
-export const useTaskStore = create((set) => ({
+export const useTaskStore = create((set, get) => ({
   tasks: [],
+  loading: false,
+
   fetchTasks: async () => {
     try {
+      set({ loading: true });
       const res = await api.get('/tasks');
       set({ tasks: res.data });
     } catch (err) {
-      console.error('fetchTasks error', err);
+      console.error('❌ Fetch tasks failed:', err);
+    } finally {
+      set({ loading: false });
     }
   },
-  addTask: async (payload) => {
+
+  addTask: async (task) => {
     try {
-      await api.post('/tasks', payload);
-      const res = await api.get('/tasks');
-      set({ tasks: res.data });
+      await api.post('/tasks', task);
+      await get().fetchTasks();
     } catch (err) {
-      console.error('addTask error', err);
+      alert(err?.response?.data?.error || 'Failed to create task');
     }
-  }
+  },
+
+  updateTask: async (id, updatedData) => {
+    try {
+      await api.put(`/tasks/${id}`, updatedData);
+      await get().fetchTasks();
+    } catch (err) {
+      alert(err?.response?.data?.error || 'Failed to update task');
+    }
+  },
+
+  deleteTask: async (id) => {
+    try {
+      await api.delete(`/tasks/${id}`);
+      await get().fetchTasks();
+    } catch (err) {
+      alert(err?.response?.data?.error || 'Failed to delete task');
+    }
+  },
 }));

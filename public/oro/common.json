@@ -1,0 +1,20 @@
+{
+  "appTitle": "Manajara Taaskii",
+  "login": "Seeni",
+  "register": "Galmaa'i",
+  "email": "Imeeyli",
+  "password": "Jecha darbii",
+  "logout": "Ba'i",
+  "createTask": "Taaskii Uumi",
+  "title": "Mata-duree",
+  "description": "Ibsa",
+  "dueDate": "Guyyaa Xumuramuu",
+  "status": "Haala",
+  "status.pending": "Eegamaa",
+  "status.in_progress": "Hojjetamaa Jira",
+  "status.completed": "Xumurame",
+  "task.created": "Taaskii milkaa'inaan uumame",
+  "user": "Fayyadamaa",
+  "admin": "Bulchaa",
+  "language": "Afaan"
+}

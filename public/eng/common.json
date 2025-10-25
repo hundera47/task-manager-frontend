@@ -1,0 +1,20 @@
+{
+  "appTitle": "Task Manager",
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "logout": "Logout",
+  "createTask": "Create Task",
+  "title": "Title",
+  "description": "Description",
+  "dueDate": "Due Date",
+  "status": "Status",
+  "status.pending": "Pending",
+  "status.in_progress": "In Progress",
+  "status.completed": "Completed",
+  "task.created": "Task created successfully",
+  "user": "User",
+  "admin": "Admin",
+  "language": "Language"
+}
