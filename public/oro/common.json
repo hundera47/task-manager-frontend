@@ -16,5 +16,16 @@
   "task.created": "Taaskii milkaa'inaan uumame",
   "user": "Fayyadamaa",
   "admin": "Bulchaa",
-  "language": "Afaan"
+  "language": "Afaan",
+  "welcomeTitle": "Hojii kee salphisiisi {{appName}} waliin",
+  "welcomeSubtitle": "Hojiiwwan qindeessi, tarkaanfii hordofi, fi waliin hojjedhi — bakka tokkotti.",
+  "getStarted": "Jalqabi",
+  "whyChoose": "Maaliif {{appName}} filatta?",
+  "feature1_title": "Hojii Kee Hordofi",
+  "feature1_desc": "Hojiiwwan salphatti dabali, sirreessi fi xumuri — qindoomina kee eegi.",
+  "feature2_title": "Waliin Hojjedhu",
+  "feature2_desc": "Admiinota fi fayyadamtoonni walitti dhufeenya isaanii tursiisu danda’u.",
+  "feature3_title": "Tarkaanfii kee Ilaali",
+  "feature3_desc": "Tartiiba fi chartiiwwan waliin galtee kee salphatti ilaali.",
+  "footer": "❤️ fi Next.js waliin ijaarame"
 }

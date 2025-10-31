@@ -10,5 +10,16 @@
   "description": "Description",
   "dueDate": "Due Date",
   "status": "Status",
-  "language": "Language"
+  "language": "Language",
+  "welcomeTitle": "Simplify your workflow with {{appName}}",
+  "welcomeSubtitle": "Organize tasks, track progress, and collaborate effortlessly — all in one place.",
+  "getStarted": "Get Started",
+  "whyChoose": "Why Choose {{appName}}?",
+  "feature1_title": "Track Your Tasks",
+  "feature1_desc": "Easily add, edit, and complete tasks — stay organized effortlessly.",
+  "feature2_title": "Collaborate as a Team",
+  "feature2_desc": "Admins and users can share progress and stay aligned.",
+  "feature3_title": "Visualize Progress",
+  "feature3_desc": "Pie charts and filters give you clear insights into your goals.",
+  "footer": "Built with ❤️ using Next.js"
 }

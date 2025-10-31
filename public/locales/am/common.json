@@ -10,5 +10,16 @@
   "description": "ማብራሪያ",
   "dueDate": "የመጨረሻ ቀን",
   "status": "ሁኔታ",
-  "language": "ቋንቋ"
+  "language": "ቋንቋ",
+  "welcomeTitle": "የእርስዎን ስራ ፍሰት አቀላጥፉ በ {{appName}}",
+  "welcomeSubtitle": "ስራዎችን ያዘጋጁ፣ እድገትን ይከታተሉ፣ እና በቀላሉ ይተባበሩ።",
+  "getStarted": "ጀምር",
+  "whyChoose": "ለምን {{appName}}?",
+  "feature1_title": "ስራዎችን ይከታተሉ",
+  "feature1_desc": "በቀላሉ ያክሉ፣ ያስተካክሉ እና ያበቃሉ። እቅድዎን በቀላሉ ይዘጋጁ።",
+  "feature2_title": "በቡድን ይስሩ",
+  "feature2_desc": "አስተዳዳሪዎችና ተጠቃሚዎች የስራ እድገትን በአንድነት ይከታተላሉ።",
+  "feature3_title": "እድገትዎን ያዩ",
+  "feature3_desc": "ገበታዎችና ማጣሪያዎች ግብዎችን በቀላሉ ያሳያሉ።",
+  "footer": "በ Next.js ተበጥቶ በፍቅር የተገነባ"
 }

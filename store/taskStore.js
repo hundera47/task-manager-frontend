@@ -5,7 +5,13 @@ import api from '@/utils/api';
 export const useTaskStore = create((set, get) => ({
   tasks: [],
   loading: false,
+  filterStatus: 'all',
+  sortBy: 'due_date',
 
+  
+  setFilterStatus: (status) => set({ filterStatus: status }),
+  setSortBy: (sortBy) => set({ sortBy }),
+  
   fetchTasks: async () => {
     try {
       set({ loading: true });
