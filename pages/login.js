@@ -23,6 +23,10 @@ export default function Login() {
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('role', res.data.role);
       alert('✅ Logged in successfully');
+      //************
+      useEffect(() => {
+        console.log('Backend API Base URL:', process.env.NEXT_PUBLIC_API_URL);
+      }, []);
       router.push('/dashboard');
     } catch (err) {
       alert(err?.response?.data?.error || '❌ Login failed');
