@@ -30,6 +30,7 @@ export default function Login() {
       router.push('/dashboard');
     } catch (err) {
       alert(err?.response?.data?.error || '❌ Login failed');
+      console.log(err);
     } finally {
       setLoading(false);
     }
