@@ -27,7 +27,7 @@ export default function Login() {
 
       router.push('/dashboard');
     } catch (err) {
-      alert(err?.response?.data?.error || '❌ Login failed');
+      alert(err?.response?.data?.error || '❌ Login failed.. why?');
       console.log(err);
     } finally {
       setLoading(false);
