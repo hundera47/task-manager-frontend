@@ -1,8 +1,9 @@
-import { i18n } from './next-i18next.config.js';
+// next.config.mjs
+import nextI18NextConfig from './next-i18next.config.js';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n,
+  ...nextI18NextConfig, // ✅ spread the whole config (works with CommonJS)
   reactStrictMode: true,
 };
 
