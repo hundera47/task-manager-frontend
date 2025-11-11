@@ -1,10 +1,8 @@
-// next.config.mjs
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const nextI18NextConfig = require('./next-i18next.config.js');
+import { i18n } from './next-i18next.config.js';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  ...nextI18NextConfig,
+  i18n,
   reactStrictMode: true,
 };
 

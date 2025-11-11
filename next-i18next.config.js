@@ -1,9 +1,7 @@
-// next-i18next.config.js
 module.exports = {
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'om', 'am'],
-    localeDetection: true,
+    locales: ['en', 'am'],
   },
-  react: { useSuspense: false },
+  reloadOnPrerender: process.env.NODE_ENV === 'development',
 };
